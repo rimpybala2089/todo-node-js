@@ -1,0 +1,44 @@
+ 406  curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+  407  sudo install minikube-linux-amd64 /usr/local/bin/minikube
+  408  minikube start --driver=docker
+  409  sudo usermod -aG docker $USER && newgrp docker
+  410  minikube start
+  411  minikube ssh
+  412  kubectl get pods
+  413  kubectl get namespaces
+  414  kubectl create  namespace node-todo-app
+  415  kubectl get namespaces
+  416  vim deployment.yaml
+  417  kubectl apply -f deployment.yaml 
+  418  vim service.yaml
+  419  kubectl apply -f service.yaml 
+  420  kubectl get pods
+  421  kubectl get pods -n node-to-app
+  422  kubectl get pods -n node-todo-app
+  423  kubectl service node-todo-sevice -n node-todo-app
+  424  minikube service node-todo-sevice -n node-todo-app
+  425  minikube service node-todo-sevice -n node-todo-app --url
+  426  cat service.yaml
+  427  kubectl get namespaces
+  428  minikube service node-todo-sevice -n node-todo-app --url
+  429  minikube service list
+  430  kubectl apply -f service.yaml 
+  431  minikube service list
+  432  curl -L http://192.168.49.2:30148
+  433  minikube service list
+  434  clear
+  435  cd ..
+  436  mkdir ngrok_setup
+  437  cd ngrok_setup/
+  438  ls
+  439  wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
+  440  ls
+  441  tar -xvzf ngrok-v3-stable-linux-amd64.tgz
+  442  ngrok config add-authtoken 2MIzTqWLEtxE60mKEgbxIbPP2Ay_3q6ctPUzwSBSA1Shhufa1
+  443  sudo snap install ngrok
+  444*                                                                                                                                      
+  445  ./http 192.168.49.2:30148
+  446  ./ngrok http 192.168.49.2:30148
+  447  ./ngrok config add-authtoken 2MIzTqWLEtxE60mKEgbxIbPP2Ay_3q6ctPUzwSBSA1Shhufa1
+  448  ./ngrok http 192.168.49.2:30148
+  449  history
